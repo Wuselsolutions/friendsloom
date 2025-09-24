@@ -1,20 +1,22 @@
-<!DOCTYPE html>
+---
+---
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Friendsloom</title>
+  <meta charset="utf-8">
+  <title>Friendsloom — loading</title>
+  <meta name="robots" content="noindex">
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const lang = navigator.language || navigator.userLanguage;
-      if (lang.startsWith("de")) {
-        window.location.href = "/index.de.md";
-      } else {
-        window.location.href = "/index.en.md";
-      }
-    });
+    (function(){
+      var lang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+      var target = lang.indexOf('de') === 0 ? 'index.de.html' : 'index.en.html';
+      // relative redirect: funktioniert für https://USERNAME.github.io/REPO/
+      window.location.replace('./' + target);
+    })();
   </script>
 </head>
 <body>
   <p>Lade Friendsloom… / Loading Friendsloom…</p>
+  <p><a href="./index.de.html">Deutsch</a> • <a href="./index.en.html">English</a></p>
 </body>
 </html>
