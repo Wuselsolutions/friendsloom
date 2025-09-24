@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Friendsloom</title>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const lang = navigator.language || navigator.userLanguage;
+      if (lang.startsWith("de")) {
+        window.location.href = "/index.de.html";
+      } else {
+        window.location.href = "/index.en.html";
+      }
+    });
+  </script>
+</head>
+<body>
+  <p>Lade Friendsloom… / Loading Friendsloom…</p>
+</body>
+</html>
